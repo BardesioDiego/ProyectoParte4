@@ -80,26 +80,20 @@
                         <a href="package.html" class="nav-item nav-link">Tour Packages</a>
                         <a href="destination.html" class="nav-item nav-link">Destination</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <div class="search-bar">
+                            <input type="text" class="nav-item nav-link" placeholder="Enter keywords...">
+                            <button class="search-button" id="search-button">Search</button>
+                            <button class="reset-button" id="">Reset</button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
-
-<div class="container">
-    <h2>Buscador de Viajes</h2>
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Buscar por destino...">
-        <select id="categorySelect">
-            <option value="">Todos los destinos</option>
-            <option value="playa">Playas</option>
-            <option value="templo">Templos</option>
-        </select>
-        <button type="submit">Buscar</button>
-    </form>
-    <div id="results"></div>
-</div>
+    <div id="search-results">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </div>
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
