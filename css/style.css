@@ -300,6 +300,16 @@ fieldset {
   margin: 0;
   border: 0;
 }
+.buscar{
+  margin-top: 25px;
+}
+
+.search-button{
+  margin-top: 5px;
+  border-radius: 10%;
+  background-color: #7AB730;
+  color: white;
+}
 
 legend {
   display: block;

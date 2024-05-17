@@ -67,3 +67,47 @@
     });
     
 })(jQuery);
+
+
+//search
+
+// Function to handle the search
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle the search
+    function searchPlace() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const resultDiv = document.getElementById('search-results');
+      
+      // Clear previous results
+      resultDiv.innerHTML = '';
+  
+      // Fetch data from the JSON file
+      fetch('travel_recomendation_api.json')
+        .then(response => response.json())
+        .then(data => {
+          const temple = data.temples.find(item => item.name.toLowerCase() === input);
+          const beach = data.beaches.find(item => item.name.toLowerCase() === input);
+  
+          if (temple) {
+            resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
+            resultDiv.innerHTML += `<img src="${temple.imageUrl}" alt="${temple.name}">`;
+            resultDiv.innerHTML += `<p>${temple.description}</p>`;
+          } else if (beach) {
+            resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
+            resultDiv.innerHTML += `<img src="${beach.imageUrl}" alt="${beach.name}">`;
+            resultDiv.innerHTML += `<p>${beach.description}</p>`;
+          } else {
+            resultDiv.innerHTML = 'Place not found.';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          resultDiv.innerHTML = 'An error occurred while fetching data.';
+        });
+    }
+  
+    // Add event listener to the search button
+    const btnSearch = document.getElementById('btnSearch');
+    btnSearch.addEventListener('click', searchPlace);
+  });
+  

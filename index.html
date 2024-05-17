@@ -77,13 +77,12 @@
                     <div class="navbar-nav ml-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+                        <a href="package.html" class="nav-item nav-link">Packages</a>
                         <a href="destination.html" class="nav-item nav-link">Destination</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                         <div class="search-bar">
-                            <input type="text" class="nav-item nav-link" placeholder="Enter keywords...">
-                            <button class="search-button" id="search-button">Search</button>
-                            <button class="reset-button" id="">Reset</button>
+                            <input type="text" id="search" class="buscar" placeholder="Search...">
+                            <button class="search-button" id="btnSearch">Search</button>
                         </div>
                     </div>
                 </div>
@@ -91,9 +90,7 @@
         </div>
     </div>
     <!-- Navbar End -->
-    <div id="search-results">
-        <!-- Aquí se mostrarán los resultados de la búsqueda -->
-    </div>
+   
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -132,7 +129,9 @@
         </div>
     </div>
     <!-- Carousel End -->
-
+    <div id="search-results">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </div>
 
     <!-- Booking Start -->
     <div class="container-fluid booking mt-5 pb-5">
